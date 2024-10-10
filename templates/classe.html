@@ -1,0 +1,32 @@
+{{define "Classe"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/classe.css">
+</head>
+<body>
+    <h1>Données de {{.NomClasse}} {{.Filiere}}</h1>
+    <p class="nbr-eleves">Nombre d'élèves : {{.NbrEt}}</p>
+
+    {{range .Etu}}
+    <div class="etudiant">
+        <p>Nom : {{.Nom}} </p>
+        <p>Prénom : {{.Prenom}} </p>
+        <p>Age : {{.Age}} </p>
+        <div class="sexe-container">
+            <p>Sexe :</p>
+            {{if eq .Sexe "m"}}
+            <img src="/static/img/Masculin.png" alt="Masculin">
+            {{else}}
+            <img src="/static/img/feminin.png" alt="Féminin">
+            {{end}}
+        </div>
+    </div>
+    {{end}}
+
+</body>
+</html>
+{{end}}
