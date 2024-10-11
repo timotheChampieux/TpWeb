@@ -1,8 +1,8 @@
 /* Style global */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ccffcc; /* Fond vert clair */
-    color: #333333;
+    background-color: #68b968; /* Fond vert clair */
+    color: #353535;
     margin: 0;
     padding: 20px;
 }
@@ -23,6 +23,7 @@ p {
 
 /* Style pour chaque étudiant encadré */
 .etudiant {
+    
     background-color: #ffffff; /* Fond blanc */
     padding: 15px;
     border-radius: 8px;
