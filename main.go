@@ -39,7 +39,7 @@ func main() {
 		dataClasse := Classe{"b1", "info", 34, []Eleve{{"romain", "bourdot", 20, "m"}, {"Timothé", "Champieux", 18, "m"}, {"Tomy", "grospd", 19, "m"}, {"Tom", "Amaru", 18, "f"}}}
 
 		//listTemp.ExecuteTemplate(w, "condition", dataPage)
-		listTemp.ExecuteTemplate(w, "Classe", dataClasse)
+		listTemp.ExecuteTemplate(w, "Promo", dataClasse)
 	})
 
 	http.ListenAndServe("localhost:8080", nil)
