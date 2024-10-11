@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+body.paire {
+    background-color: #ccffcc;
+    color: #003300;
+}
+
+body.impaire {
+    background-color: #ffcccc;
+    color: #660000;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.5s ease;
+}
+
+.message {
+    font-size: 1.8rem;
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+body.paire .message {
+    border-color: #006600;
+    background-color: #e6ffe6;
+    color: #003300;
+}
+
+body.impaire .message {
+    border-color: #990000;
+    background-color: #ffe6e6;
+    color: #660000;
+}

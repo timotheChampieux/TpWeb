@@ -34,12 +34,25 @@ func main() {
 	fileServer := http.FileServer(http.Dir("./assets"))
 	http.Handle("/static/", http.StripPrefix("/static/", fileServer))
 
-	http.HandleFunc("/ynov", func(w http.ResponseWriter, r *http.Request) {
-		//dataPage := PageConditionSimple{true}
+	http.HandleFunc("/promo", func(w http.ResponseWriter, r *http.Request) {
 		dataClasse := Classe{"b1", "info", 34, []Eleve{{"romain", "bourdot", 20, "m"}, {"Timothé", "Champieux", 18, "m"}, {"Tomy", "grospd", 19, "m"}, {"Tom", "Amaru", 18, "f"}}}
-
-		//listTemp.ExecuteTemplate(w, "condition", dataPage)
 		listTemp.ExecuteTemplate(w, "Promo", dataClasse)
+
+	})
+
+	type Change struct {
+		Count    int
+		ViewType string
+	}
+	var count int
+	http.HandleFunc("/change", func(w http.ResponseWriter, r *http.Request) {
+		count++
+		viewType := "impaire"
+		if count%2 == 0 {
+			viewType = "paire"
+		}
+		dataChange := Change{count, viewType}
+		listTemp.ExecuteTemplate(w, "change", dataChange)
 	})
 
 	http.ListenAndServe("localhost:8080", nil)

@@ -1,0 +1,21 @@
+{{define "change"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de Vues</title>
+    <link rel="stylesheet" href="change.css">
+</head>
+<body class="{{.ViewType}}">
+    <h1>Compteur de Vues</h1>
+    <div class="message">
+        {{if eq .ViewType "impaire"}}
+            <p id="impaire">Le nombre de vues est {{.ViewType}} : {{.Count}}</p>
+        {{else}}
+        <p id="paire">Le nombre de vues est {{.ViewType}} : {{.Count}}</p>
+        {{end}}
+    </div>
+</body>
+</html>
+{{end}}

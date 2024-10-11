@@ -1,58 +1,58 @@
-/* Style global */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #68b968; /* Fond vert clair */
+    background-color: #68b968;
     color: #353535;
     margin: 0;
     padding: 20px;
 }
-/* Centrage du titre */
+
 h1 {
     color: #003366;
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center; /* Centre le titre */
+    text-align: center; 
 }
 
-/* Paragraphes pour les informations d'étudiants */
+
 p {
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-/* Style pour chaque étudiant encadré */
+
 .etudiant {
     
-    background-color: #ffffff; /* Fond blanc */
+    background-color: #ffffff; 
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    border: 2px solid #003366; /* Bordure bleue foncée */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #003366; 
 }
 
-/* Survol des blocs étudiant */
+
 .etudiant:hover {
-    background-color: #e6f2ff; /* Léger bleu clair au survol */
+    background-color: #e6f2ff; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Style pour le nombre d'élèves */
+
 .nbr-eleves {
     font-weight: bold;
-    color: #0066cc; /* Bleu vif */
+    color: #0066cc;
     margin-bottom: 30px;
 }
 
-/* Style pour aligner le texte "Sexe :" et l'image sur la même ligne */
+
 .sexe-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Espace après le conteneur */
+    margin-bottom: 10px; 
 }
 
 .sexe-container p {
-    margin-right: 10px; /* Espace entre le texte et l'image */
+    margin-right: 10px; 
 }
 
 img {
