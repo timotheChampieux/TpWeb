@@ -1,0 +1,22 @@
+{{define "display"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Données Utilisateur</title>
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Données Utilisateur</h1>
+        <div class="user-info">
+            <p>Nom : {{.Nom}}</p>
+            <p>Prénom : {{.Prenom}}</p>
+            <p>Date de Naissance : {{.DateNaissance}}</p>
+            <p>Sexe : {{.Sexe}}</p>
+        </div>
+    </div>
+</body>
+</html>
+{{end}}

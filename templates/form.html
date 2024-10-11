@@ -1,0 +1,35 @@
+{{define "form"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Utilisateur</title>
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Formulaire d'Informations Personnelles</h1>
+        <form action="/user/treatment" method="post" class="user-form">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required><br><br>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+
+            <label for="dateNaissance">Date de naissance :</label>
+            <input type="text" id="dateNaissance" name="dateNaissance"><br><br>
+
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe">
+                <option value="masculin">Masculin</option>
+                <option value="féminin">Féminin</option>
+                <option value="autre">Autre</option>
+            </select><br><br>
+
+            <input type="submit" value="Envoyer" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>
+{{end}}
